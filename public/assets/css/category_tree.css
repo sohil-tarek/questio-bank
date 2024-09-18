@@ -1,0 +1,9 @@
+body{ padding:0px !important;}
+.fancytree-treefocus .fancytree-selected .fancytree-title { background:none; color:#333333 !important}
+.fancytree-expander { /*display:none;*/ height:auto;}
+.fancytree-expander{ width:16px;}
+.fancytree-has-children.fancytree-ico-e .fancytree-icon:after{ display: block !important;}
+.fancytree-has-children.fancytree-ico-c .fancytree-icon:after{ display:block !important;}
+.fancytree-icon{ display:block !important;}
+.icon-arrow-down22{ cursor: pointer;}
+.icon-arrow-right22 { cursor: pointer;}
