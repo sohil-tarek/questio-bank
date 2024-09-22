@@ -12,7 +12,7 @@
                     <thead>
                     <tr>
                         <th><strong>الاسم</strong></th>
-                        <th nowrap="" class="text-center"><strong>إدارة الصف</strong></th>
+                        <th nowrap="" class="text-center"><strong>إدارة النواتج</strong></th>
 
                     </tr>
                     </thead>
@@ -21,10 +21,10 @@
 
                     <tr>
 
-                        <td class="text-left">العلوم الفصل الدراسى الأول</td>
+                        <td class="text-left">الناتج الاول</td>
 
                         <td nowrap="nowrap" class="text-center"><a
-                                href="{{route('learning.out.come')}}">إدارة المواد</a>
+                                href="{{route('add.question')}}">الأسئله</a>
                         </td>
 
                     </tr>
