@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use OpenAI\Client;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use OpenAI\Laravel\Facades\OpenAI;
+
 
 class dashboardController extends Controller
 {
@@ -36,10 +36,10 @@ class dashboardController extends Controller
     public function addQuestionCreate(Request $request){
 
 
-        $prompt = "Create a mcq question on the CCSS For Mathematics  on the following topic :
-                    C. Analyze and solve linear equations and pairs of simultaneous linear equations.
-                    that question are easy wtih  4 option with making the response are json";
-
+//        $prompt = "Create a mcq question on the CCSS For Mathematics  on the following topic :
+//                    C. Analyze and solve linear equations and pairs of simultaneous linear equations.
+//                    that question are easy wtih  4 option with making the response are json";
+//
 
 
         // Call GPT API
@@ -52,9 +52,22 @@ class dashboardController extends Controller
 //            ],
 //        ]);
 
-        
-        $client = \OpenAI::client(getenv('GPT_API_KEY'));
-        $result = $client->chat()->create([
+
+//        $client = OpenAI::Client(getenv('GPT_API_KEY'));
+
+
+//        $client = new Client();
+//        $response = $client->get('https://api.openai.com/v1/models', [
+//            'headers' => [
+//                'Authorization' => 'Bearer ' . env('OPENAI_API_KEY'),
+//                'Content-Type' => 'application/json',
+//            ],
+//        ]);
+
+//        $models = json_decode($response->getBody()->getContents(), true);
+
+
+        $result = OpenAI::chat()->create([
             'model' => 'gpt-3.5-turbo',
             'messages' => [
                 ['role' => 'user', 'content' => 'Hello!'],
